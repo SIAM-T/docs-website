@@ -125,7 +125,7 @@ To install the C SDK into your application's code library, follow this procedure
     id="example-program"
     title="6. Compile and link your app."
   >
-    The C SDK's `libnewrelic.a` is a static library that is already linked with the `libpcre` and `libpthread` libraries. To avoid symbol collisions in this linking step, be sure to link against each of these libraries.
+    The C SDK `libnewrelic.a` is a static library that is already linked with the `libpcre` and `libpthread` libraries. To avoid symbol collisions in this linking step, be sure to link against each of these libraries.
 
     In addition, to take full advantage of error traces in APM's [<DNT>**Error analytics**</DNT> page](/docs/apm/applications-menu/error-analytics/introduction-error-analytics), link your application using GNU's `-rdynamic` linker flag. This will allow more meaningful information to appear in the stack trace for the error recording on a transaction using the C SDK's `newrelic_notice_error` API call.
 
